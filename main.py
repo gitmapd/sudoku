@@ -15,6 +15,14 @@ layout.addWidget(QLabel('6'), 1, 2)
 layout.addWidget(QLabel('7'), 2, 0)
 layout.addWidget(QLabel('8'), 2, 1)
 layout.addWidget(QLabel('9'), 2, 2)
+layout.addWidget(QLabel('1'), 0, 3)
+layout.addWidget(QLabel('2'), 0, 4)
+layout.addWidget(QLabel('3'), 0, 5)
+layout.addWidget(QLabel('4'), 1, 3)
+layout.addWidget(QLabel('5'), 1, 4)
+layout.addWidget(QLabel('6'), 1, 5)
+
+
 window.setLayout(layout)
 window.show()
 
