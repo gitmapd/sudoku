@@ -1,4 +1,5 @@
 import sys
+from tkinter.messagebox import YES
 from PyQt5.QtWidgets import QApplication, QLabel
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLineEdit
 from random import randrange
@@ -10,11 +11,13 @@ layout = QGridLayout()
 
 
 for i in range(9):
-    a=randrange(0,10)
     for j in range(9):
-        layout.addWidget(QLineEdit(f"{a}"), i, j)
-
-
+        a=randrange(1,10)
+        lineedit=QLineEdit(f"{a}")
+        lineedit.setFixedWidth(20)
+        lineedit.setReadOnly(True)
+        lineedit.move(20 + 40 * j, 20 + 40 * i)
+        layout.addWidget(lineedit,i,j)
 window.setLayout(layout)
 window.show()
 
