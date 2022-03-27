@@ -3,6 +3,8 @@ from tkinter.messagebox import YES
 from PyQt5.QtWidgets import QApplication, QLabel
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLineEdit
 from itertools import chain
+
+from torch import square
 app=QApplication(sys.argv)
 window=QWidget()
 window.setWindowTitle("Sudoku")
@@ -20,11 +22,12 @@ square_values = [
     ,[None, None, None, None, 8, None, None, 7, 9]]
 for i in range(9):
     for j in range(9):
-        a=[x for sublist in square_values for x in sublist]
-        lineedit=QLineEdit(f'{a}')
+        row=square_values[i]
+        col=row[j]
+        lineedit=QLineEdit(f'{col}')
         lineedit.setFixedWidth(20)
         lineedit.setReadOnly(False)
-        #   lineedit.move(20 + 40 * j, 20 + 40 * i)
+    #lineedit.move(20 + 40 * j, 20 + 40 * i)
         layout.addWidget(lineedit,i,j) 
 window.setLayout(layout)
 window.show()
