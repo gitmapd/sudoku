@@ -23,6 +23,7 @@ for i in range(9):
         number=square_values[i][j]
         if number != None:
             qlabel=QLabel(f'{number}')
+            layout.addWidget(qlabel,i,j)
         else:
             if number == None:
                 number=''
@@ -30,7 +31,7 @@ for i in range(9):
                 lineedit.setFixedWidth(20)
                 lineedit.setReadOnly(False)
                 layout.addWidget(lineedit,i,j) 
-        layout.addWidget(qlabel,i,j)
+        
 window.setLayout(layout)
 window.show()
 
