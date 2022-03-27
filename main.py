@@ -20,15 +20,17 @@ square_values = [
     ,[None, None, None, None, 8, None, None, 7, 9]]
 for i in range(9):
     for j in range(9):
-        row=square_values[i]
-        number=row[j]
-        if number==None:
-            number=''
-        lineedit=QLineEdit(f'{number}')
-        lineedit.setFixedWidth(20)
-        lineedit.setReadOnly(False)
-    #lineedit.move(20 + 40 * j, 20 + 40 * i)
-        layout.addWidget(lineedit,i,j) 
+        number=square_values[i][j]
+        if number != None:
+            qlabel=QLabel(f'{number}')
+        else:
+            if number == None:
+                number=''
+                lineedit=QLineEdit(f'{number}')
+                lineedit.setFixedWidth(20)
+                lineedit.setReadOnly(False)
+                layout.addWidget(lineedit,i,j) 
+        layout.addWidget(qlabel,i,j)
 window.setLayout(layout)
 window.show()
 
