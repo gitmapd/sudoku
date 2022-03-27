@@ -23,8 +23,10 @@ square_values = [
 for i in range(9):
     for j in range(9):
         row=square_values[i]
-        col=row[j]
-        lineedit=QLineEdit(f'{col}')
+        number=row[j]
+        if number==None:
+            number=''
+        lineedit=QLineEdit(f'{number}')
         lineedit.setFixedWidth(20)
         lineedit.setReadOnly(False)
     #lineedit.move(20 + 40 * j, 20 + 40 * i)
