@@ -2,12 +2,10 @@ import sys
 from tkinter.messagebox import YES
 from PyQt5.QtWidgets import QApplication, QLabel
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLineEdit
-from random import randrange
 
 app=QApplication(sys.argv)
 window=QWidget()
 window.setWindowTitle("Sudoku")
-l1=QLabel()
 layout = QGridLayout()
 
 square_values = [
