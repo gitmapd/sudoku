@@ -2,9 +2,7 @@ import sys
 from tkinter.messagebox import YES
 from PyQt5.QtWidgets import QApplication, QLabel
 from PyQt5.QtWidgets import QWidget, QGridLayout, QLineEdit
-from itertools import chain
 
-from torch import square
 app=QApplication(sys.argv)
 window=QWidget()
 window.setWindowTitle("Sudoku")
